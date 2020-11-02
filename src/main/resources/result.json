@@ -1,0 +1,109 @@
+{
+  "interfaces": {
+    "WAN": [
+      {
+        "role": "primary",
+        "description": "WAN-new",
+        "transport": {
+          "password": null,
+          "neighbourPeerIP": null,
+          "name": "Internet",
+          "pppoe": {
+            "interfaces": [
+              {
+                "password": null,
+                "role": "sdwanSelectedInternet",
+                "gateway": false,
+                "username": "Tst"
+              },
+              {
+                "password": null,
+                "role": "split",
+                "gateway": false,
+                "username": null
+              }
+            ],
+            "enabled": true
+          },
+          "peerAs": null
+        },
+        "services": {
+          "ipsec": []
+        },
+        "enabled": true,
+        "MTU": 1500,
+        "VLANId": 0,
+        "interfaceType": "WAN",
+        "addressV4": {
+          "address": "auto",
+          "staticRoute": [],
+          "origin": "dhcp",
+          "DNSPrimary": "auto",
+          "gateway": "auto",
+          "DNSSecondary": "auto"
+        },
+        "port": 1,
+        "function": "split",
+        "gateway": false,
+        "APN": null
+      },
+      {
+        "role": "ssecondaryprimary",
+        "description": "WAN-new",
+        "transport": {
+          "password": null,
+          "neighbourPeerIP": null,
+          "name": "Internet",
+          "pppoe": {
+            "enabled": true
+          },
+          "peerAs": null
+        },
+        "services": null,
+        "enabled": true,
+        "MTU": 1500,
+        "VLANId": 0,
+        "interfaceType": "WAN",
+        "addressV4": {
+          "address": "auto",
+          "staticRoute": [],
+          "origin": "dhcp",
+          "DNSPrimary": "auto",
+          "gateway": "auto",
+          "DNSSecondary": "auto"
+        },
+        "port": 2,
+        "function": "split",
+        "gateway": false,
+        "APN": null
+      },
+      {
+        "VLANId": 0,
+        "interfaceType": "WAN",
+        "addressV4": {
+          "staticRoute": [],
+          "origin": "dhcp",
+          "DNSPrimary": "auto",
+          "gateway": "auto",
+          "DNSSecondary": "auto"
+        },
+        "role": "primary",
+        "port": 3,
+        "function": "split",
+        "description": "WAN-new",
+        "transport": {
+          "password": null,
+          "neighbourPeerIP": null,
+          "name": "Internet",
+          "pppoe": {
+            "enabled": true
+          }
+        },
+        "enabled": true,
+        "gateway": false,
+        "MTU": 1500,
+        "APN": null
+      }
+    ]
+  }
+}

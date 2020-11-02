@@ -1,0 +1,89 @@
+{
+  "interfaces": {
+    "WAN": [
+      {
+        "port": 1,
+        "role": "primary",
+        "description": "WAN1",
+        "enabled": true,
+        "interfaceType": "WAN",
+        "gateway": false,
+        "VLANId": 0,
+        "MTU": 1500,
+        "function": "split",
+        "transport": {
+          "name": "Internet",
+          "neighbourPeerIP": null,
+          "peerAs": null,
+          "password": null,
+          "pppoe": {
+            "enabled": true,
+            "interfaces": [
+              {
+                "role": "sdwanSelectedInternet",
+                "gateway": false,
+                "username": "Tst",
+                "password": null
+              },
+              {
+                "role": "split",
+                "gateway": false,
+                "username": null,
+                "password": null
+              }
+            ]
+          }
+        },
+        "addressV4": {
+          "origin": "dhcp",
+          "address": "auto",
+          "gateway": "auto",
+          "DNSPrimary": "auto",
+          "DNSSecondary": "auto",
+          "staticRoute": [
+          ]
+        },
+        "services": {
+          "ipsec": [
+          ]
+        },
+        "APN": null
+      },
+      {
+        "port": 2,
+        "role": "secondary",
+        "description": "LTE2",
+        "enabled": true,
+        "interfaceType": "LTE",
+        "gateway": false,
+        "VLANId": 0,
+        "MTU": 1400,
+        "function": "sdwan",
+        "transport": {
+          "name": "Internet",
+          "neighbourPeerIP": null,
+          "peerAs": null,
+          "password": null,
+          "pppoe": null
+        },
+        "addressV4": {
+          "origin": "dhcp",
+          "address": "auto",
+          "gateway": "auto",
+          "DNSPrimary": "auto",
+          "DNSSecondary": "auto",
+          "staticRoute": [
+          ]
+        },
+        "services": null,
+        "APN": {
+          "type": "auto",
+          "name": null,
+          "pin": null,
+          "username": null,
+          "password": null
+        }
+      }
+    ]
+  }
+}
